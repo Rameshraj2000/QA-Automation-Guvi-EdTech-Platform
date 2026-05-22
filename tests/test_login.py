@@ -42,7 +42,7 @@ def test_signup(driver):
 def test_valid_login(driver):
     login_page = LoginPage(driver)
     login_page.login()
-    login_page.login_with_id("draj56403@gmail.com", "Ramesh@1#")
+    login_page.login_with_id("valid", "pass")
     assert login_page.is_login_visible()
 
 #test login with invalid credentials.
@@ -73,7 +73,7 @@ def test_doppy_chat(driver):
 def test_sign_out(driver):
     login_page = LoginPage(driver)
     login_page.login()
-    login_page.login_with_id("draj56403@gmail.com", "Ramesh@1#")
+    login_page.login_with_id("valid", "pass")
     login_page.sign_out()
 
     assert driver.title == "HCL GUVI | Learn to code in your native language"
